@@ -19,7 +19,7 @@ const loadLandingLeft = () => {
     landingLeftTextContainer.classList.add('landing-left-text-container');
 
     const nameHeading = document.createElement('h1');
-    nameHeading.textContent = 'JOSHUA';
+    nameHeading.textContent = 'JOSHUA CONCEPCION';
     nameHeading.classList.add('name-heading');
     const charImage = new Image();
     charImage.src = characterImage;
@@ -28,10 +28,30 @@ const loadLandingLeft = () => {
     landingLeftMediaContainer.appendChild(nameHeading);
     landingLeftMediaContainer.appendChild(charImage);
 
+    const introText = document.createElement('h1');
+    introText.classList.add('intro-text');
+    introText.classList.add('typewriter');
+
+    landingLeftTextContainer.appendChild(introText);
+
     landingLeft.appendChild(landingLeftMediaContainer);
     landingLeft.appendChild(landingLeftTextContainer);
 
     container.appendChild(landingLeft);
+
+    const text = `'Hello, I'm Joshua, a computer science graduate passionate about cybersecurity and digital forensics
+    with a background in web development.'`;
+    let i = 0;
+
+    const typeWriter = () => {
+        if (i < text.length) {
+            introText.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter,30);
+        }
+    }
+
+    typeWriter();
 }
 
 const loadLandingRight = () => {
@@ -40,3 +60,4 @@ const loadLandingRight = () => {
 
     container.appendChild(landingRight);
 }
+
