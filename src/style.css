@@ -25,6 +25,17 @@ a:hover {
     background: #908d87;
 }
 
+button {
+    all: unset;
+    cursor: url('./media/images/cursor-2.png'), auto;
+    font-size: 1.25rem;
+    color: rgb(220, 220, 220);
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
 @font-face {
     font-family: 'Eurostile';
     src: url('./media/fonts/fonnts.com-Eurostile_Cond.otf');
@@ -71,7 +82,7 @@ main {
     gap: 3rem;
 }
 
-.p1-container {
+.p1-container, .p3-container {
     display: flex;
     gap: 1rem;
 }
@@ -81,7 +92,7 @@ main {
     height: 50px;
 }
 
-.intro-text {
+.typewriter {
     font-size: 1.25rem;
 }
 
@@ -116,7 +127,12 @@ main {
     display: flex;
     flex-direction: column;
     padding: 5rem;
-    gap: 0.5rem;
+    gap: 1rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: rgb(220, 220, 220);
 }
 
 .project-header {
