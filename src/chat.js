@@ -27,7 +27,7 @@ const loadIntroText = (container, onComplete) => {
     container.appendChild(p1Container);
 
     const text = `"Hey, I'm Joshua, a computer science graduate 
-    currently exploring web development, cybersecurity,
+    from San Diego currently exploring web development, cybersecurity,
      and digital forensics. What can I do for you?"`;
     let i = 0;
 
