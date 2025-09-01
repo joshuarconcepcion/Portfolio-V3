@@ -106,7 +106,7 @@ const loadLearnMoreReply = (container) => {
     cafe hopping, exploring the city with my cat, 
     or rewatching old cowboy movies. This space is a growing archive 
     of the projects I’ve built and the ideas I’m exploring 
-    in design and development."`;
+    in development."`;
     let i = 0;
 
     const typeWriter = () => {
