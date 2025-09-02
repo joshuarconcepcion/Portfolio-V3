@@ -68,6 +68,7 @@ const loadReplyText = (container) => {
     replyBtn.textContent = '"Tell me about yourself"';
     replyBtn.addEventListener('click', () => {
         loadLearnMoreReply(container);
+        container.scrollIntoView({ behavior: 'smooth' });
     })
 
     replyTextContainer.appendChild(replyLink1);
