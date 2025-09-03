@@ -49,6 +49,12 @@ button {
     --color-project: rgb(130, 130, 130);
 }
 
+
+@supports (height: 100dvh) {
+  .page-left { min-height: 100dvh; }
+}
+
+
 /* Global layout */
 
 main {
@@ -159,11 +165,9 @@ main {
     }
 
     .chat-container { 
-        height: 60svh;
-        height: 60vh;
+        min-height: 60vh;
         padding-top: clamp(16px, 4vw, 24px);
         padding-right: var(--pad);
         scroll-margin-top: calc(env(safe-area-inset-top) + 80px);
-        margin-bottom: 0;
     }
 }
