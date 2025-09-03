@@ -67,7 +67,9 @@ const loadReplyText = (container) => {
     replyBtn.classList.add('reply-btn');
     replyBtn.textContent = '"Tell me about yourself"';
     replyBtn.addEventListener('click', () => {
-        loadLearnMoreReply(container);
+        loadLearnMoreReply(container, () => 
+            loadCurrentWorkReply(container, () => 
+                loadFunFactReply(container)));
         container.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     })
 
@@ -87,7 +89,7 @@ const loadReplyText = (container) => {
     p2Container.style.display = 'flex';
 }
 
-const loadLearnMoreReply = (container) => {
+const loadLearnMoreReply = (container, onComplete) => {
     const p3Container = document.createElement('div');
     p3Container.classList.add('p3-container'); 
 
@@ -115,7 +117,76 @@ const loadLearnMoreReply = (container) => {
             learnMoreText.textContent += text.charAt(i);
             i++;
             setTimeout(typeWriter,20);
-        } 
+        } else {
+            if (onComplete) onComplete();
+        }
+    }
+
+    typeWriter();
+}
+
+const loadCurrentWorkReply = (container, onComplete) => {
+    const p4Container = document.createElement('div');
+    p4Container.classList.add('p4-container'); 
+
+    const currentWorkText = document.createElement('h1');
+    currentWorkText.classList.add('typewriter');
+
+    const p1Icon = new Image();
+    p1Icon.src = p1IconImg;
+    p1Icon.classList.add('p-icon-img');
+
+    p4Container.appendChild(p1Icon);
+    p4Container.appendChild(currentWorkText);
+
+    container.appendChild(p4Container);
+
+    const text = `"I’m currently building projects in frontend
+     web development while deepening my skills in cybersecurity 
+     and digital forensics. It’s a mix of creative coding and 
+     technical problem solving.”`;
+    let i = 0;
+
+    const typeWriter = () => {
+        if (i < text.length) {
+            currentWorkText.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter,20);
+        } else {
+            if (onComplete) onComplete();
+        }
+    }
+
+    typeWriter();
+}
+
+const loadFunFactReply = (container) => {
+    const p5Container = document.createElement('div');
+    p5Container.classList.add('p5-container'); 
+
+    const funFactText = document.createElement('h1');
+    funFactText.classList.add('typewriter');
+
+    const p1Icon = new Image();
+    p1Icon.src = p1IconImg;
+    p1Icon.classList.add('p-icon-img');
+
+    p5Container.appendChild(p1Icon);
+    p5Container.appendChild(funFactText);
+
+    container.appendChild(p5Container);
+
+    const text = `Fun fact: “I’ve flown to Taiwan multiple times 
+    and plan to move there eventually!
+    I’m learning Chinese to make the transition smoother.”`;
+    let i = 0;
+
+    const typeWriter = () => {
+        if (i < text.length) {
+            funFactText.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter,20);
+        }
     }
 
     typeWriter();

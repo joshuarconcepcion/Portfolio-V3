@@ -94,7 +94,7 @@ main {
     height: auto;
 }
 
-.p1-container, .p3-container { display: flex; gap: 1rem; }
+.p1-container, .p3-container, .p4-container, .p5-container { display: flex; gap: 1rem; }
 
 .p-icon-img { aspect-ratio: 1 / 1; height: 50px; }
 
