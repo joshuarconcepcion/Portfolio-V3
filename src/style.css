@@ -49,18 +49,13 @@ button {
     --color-project: rgb(130, 130, 130);
 }
 
-
-@supports (height: 100dvh) {
-  .page-left { min-height: 100dvh; }
-}
-
-
 /* Global layout */
 
 main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     width: 100%;
+    height: 100vh;
 }
 
 /* Section Background */
@@ -142,32 +137,59 @@ main {
     main {
         display: flex;
         flex-direction: column;
+        width: 100%;
+    }
+
+    .page-left, .page-right {
+        width: 100%;
     }
 
     .page-left {
         display: flex;
         flex-direction: column;
-        width: 100%;
         gap: var(--pad);
     }
 
-    .page-right {
-        display: flex;
-        width: 100%;
-    }
-
-    .profile-container,
-    .chat-container,
-    .project-container {
+    .profile-container {
         padding: var(--pad);
-        gap: clamp(14px, 2.4vw, 16px);
-        display: flex;
+        gap: clamp(12px, 2.4vw, 16px);
     }
 
     .chat-container { 
-        min-height: 60vh;
+        height: 100svh;
+        height: 100dvh;
+        height: 100vh; 
+        
+        display: flex;
+        flex-direction: column;
+        gap: clamp(12px, 3vw, 20px);
+
+        padding: var(--pad);
         padding-top: clamp(16px, 4vw, 24px);
         padding-right: var(--pad);
-        scroll-margin-top: calc(env(safe-area-inset-top) + 80px);
+        padding-bottom: calc(env(safe-area-inset-bottom) + var(--pad));
+
+        scroll-margin-top: calc(env(safe-area-inset-top) + var(--pad));
+
+        margin: 0;
+        overflow: auto;
+    }
+
+    .page-right {
+        min-height: 100svh;
+        min-height: 100dvh;
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+        padding: var(--pad);
+    }
+
+    .project-container {
+        width: 100%;
+        gap: clamp(12px, 2.4vw, 16px);
+        padding: 0;
     }
 }
+
+
