@@ -139,7 +139,6 @@ main {
     main {
         display: flex;
         flex-direction: column;
-        scroll-snap-type: y proximity;
     }
 
     .page-left {
