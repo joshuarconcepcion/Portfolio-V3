@@ -48,9 +48,12 @@ button {
     --color-black: rgb(30, 30, 30);
     --color-project: rgb(130, 130, 130);
 }
+
+/*
 @supports (height: 100dvh) {
-  .page-left, .page-right, .chat-container { height: 100dvh; }
+  .page-left, .page-right { height: 100dvh; }
 }
+*/
 
 /* Global layout */
 
