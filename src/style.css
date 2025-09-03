@@ -49,7 +49,7 @@ button {
     --color-project: rgb(130, 130, 130);
 }
 @supports (height: 100dvh) {
-  .page-left, .page-right { height: 100dvh; }
+  .page-left, .page-right, .chat-container { height: 100dvh; }
 }
 
 /* Global layout */
@@ -84,7 +84,6 @@ main {
   margin-inline: auto;
   width: clamp(300px, 40vw, 450px);
   height: auto;
-  image-rendering: pixelated;
 }
 
 /* Chat Block */
