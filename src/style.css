@@ -37,7 +37,7 @@ button {
     src: url('./media/fonts/fonnts.com-Eurostile_Cond.otf');
 }
 
-/* Variables & safer viewport units */
+/* Variables */
 
 :root { 
     --pad: clamp(12px, 3vw, 24px); 
@@ -161,4 +161,6 @@ main {
         gap: clamp(14px, 2.4vw, 16px);
         display: flex;
     }
+
+    .chat-container { padding-bottom: calc(env(safe-area-inset-bottom) + var(--pad)); }
 }
