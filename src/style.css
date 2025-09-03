@@ -164,7 +164,7 @@ main {
         gap: clamp(18px, 3vw, 24px);
 
         padding: var(--pad);
-        padding-top: clamp(16px, 4vw, 24px);
+        padding-top: clamp(24px, 4vw, 36px);
         padding-right: var(--pad);
         padding-bottom: calc(env(safe-area-inset-bottom) + var(--pad));
 
