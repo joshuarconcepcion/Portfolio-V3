@@ -82,7 +82,7 @@ main {
 .char-img {
   display: block;
   margin-inline: auto;
-  width: clamp(300px, 40vw, 450px);
+  width: clamp(250px, 40vw, 450px);
   height: auto;
 }
 
