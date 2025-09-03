@@ -164,5 +164,5 @@ main {
         display: flex;
     }
 
-    .chat-container { padding-bottom: calc(env(safe-area-inset-bottom) + var(--pad)); height: auto;}
+    .chat-container { padding-bottom: calc(env(safe-area-inset-bottom) + var(--pad)); margin-bottom: var(--pad);}
 }
