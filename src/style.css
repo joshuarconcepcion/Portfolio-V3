@@ -51,7 +51,7 @@ button {
 
 
 @supports (height: 100dvh) {
-  .page-left { height: 100dvh; }
+  .page-left { min-height: 100dvh; }
 }
 
 
@@ -85,7 +85,7 @@ main {
 .char-img {
   display: block;
   margin-inline: auto;
-  width: clamp(250px, 40vw, 450px);
+  width: clamp(300px, 40vw, 450px);
   height: auto;
 }
 
@@ -164,5 +164,10 @@ main {
         display: flex;
     }
 
-    .chat-container { padding-bottom: calc(env(safe-area-inset-bottom) + var(--pad)); margin-bottom: var(--pad);}
+    .chat-container { 
+    min-height: 50vh;
+    padding-top: clamp(16px, 4vw, 24px);
+    padding-right: var(--pad);
+    padding-bottom: calc(env(safe-area-inset-bottom) + var(--pad));
+    scroll-margin-top: calc(env(safe-area-inset-top) + 80px);}
 }
