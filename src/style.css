@@ -51,7 +51,7 @@ button {
 
 
 @supports (height: 100dvh) {
-  .page-left { height: 100dvh; }
+  .page-left, .chat-container { height: 100dvh; }
 }
 
 
