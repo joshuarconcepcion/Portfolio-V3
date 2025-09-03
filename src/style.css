@@ -152,7 +152,7 @@ main {
     }
 
     .page-right {
-        display: block;
+        display: flex;
         width: 100%;
     }
 
