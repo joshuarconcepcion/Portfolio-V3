@@ -35,7 +35,7 @@ const loadIntroText = (container, onComplete) => {
         if (i < text.length) {
             introText.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter,20);
+            setTimeout(typeWriter,10);
         } else {
             if (onComplete) onComplete();
         }
@@ -116,7 +116,7 @@ const loadLearnMoreReply = (container, onComplete) => {
         if (i < text.length) {
             learnMoreText.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter,20);
+            setTimeout(typeWriter,10);
         } else {
             if (onComplete) onComplete();
         }
@@ -151,7 +151,7 @@ const loadCurrentWorkReply = (container, onComplete) => {
         if (i < text.length) {
             currentWorkText.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter,20);
+            setTimeout(typeWriter,10);
         } else {
             if (onComplete) onComplete();
         }
@@ -185,7 +185,7 @@ const loadFunFactReply = (container) => {
         if (i < text.length) {
             funFactText.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter,20);
+            setTimeout(typeWriter,10);
         }
     }
 
