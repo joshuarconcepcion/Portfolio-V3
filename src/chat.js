@@ -176,7 +176,7 @@ const loadFunFactReply = (container) => {
 
     container.appendChild(p5Container);
 
-    const text = `Fun fact: “I’ve flown to Taiwan multiple times 
+    const text = `"Fun fact: I’ve flown to Taiwan multiple times 
     and plan to move there eventually!
     I’m learning Chinese to make the transition smoother.”`;
     let i = 0;
